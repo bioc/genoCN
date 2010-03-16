@@ -1,0 +1,20 @@
+
+useDynLib(genoCN)
+
+importFrom(graphics, abline, lines, mtext, par, plot, rect)
+importFrom(stats, dbinom, dnorm, lowess, median, pnorm)
+importFrom(utils, data, read.table, write.table)
+
+# ------------------------------------------
+# Export directives.  
+# ------------------------------------------
+
+export(code.genotype)
+export(genoCNA)
+export(genoCNV)
+export(plotCN)
+
+# ------------------------------------------
+# S3method declarations.  
+# ------------------------------------------
+S3method(print, para.genoCN)

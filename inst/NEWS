@@ -1,0 +1,35 @@
+genoCN 1.06 Nov 9th 2009
+
+Updates:
+
+(1) Reduce memory usage by calculating some intermediate results on the fly. Now genoCN can handle Illumina 1M array using 32bit system.
+
+(2) Add an option to output the posterior probabilities to all the genotype classes for each SNP.
+
+(3) Add an option to output the CNV/CNA segments by Viterbi algorithm. Previously the CNV/CNA segments are called based on SNP level most likely copy number state: as long as two adjacent SNPs have different copy number states, a boundary of CNV/CNA is called. The results based on the Viterbi algorithm are quite similar to the results based on SNP-level copy number calls. For the follow up SNP-by-SNP association analysis, SNP level information is relevant than the segments of copy number changes.
+
+(4) Allow excluding the computation for LOH from the beginning. LOH is hard to be distinguished from the normal states of copy number two. Previously we include the LOH state, but only remove the copy number calls of LOH from the output.
+
+(5) Update the initial values of some parameters of genoCNV. Now the genoCNV with fixed parameter have a stable and good performance.
+
+
+genoCN 1.07 Nov 9th 2009
+
+Updates:
+
+(1) Fixed a bug in initializing the default transition probability. In version 1.06, loh=FALSE cannot completely eliminate LOH state because the default transition probability to LOH state is not set as 0.
+
+
+genoCN 1.08 Nov 17th 2009
+
+Updates:
+
+(1) Change the default output of SNP information, now output the posterior probabilities of all copy number and genotype states for all the SNPs. Note, for one SNP, the posterior probability for different copy number states (genotype states) may not add up to 1. This is because the uniform component in the mixture distribution takes the remaining probabilities.
+
+genoCN 1.09 Feb 22nd 2010
+
+Updates:
+
+(1) Change the plotCN function so that by default it plots LRR and BAF, without copy number calls.
+
+(2) Add a simulated data for human chromosome 22 and information of the SNPs for chromosome 22. 
