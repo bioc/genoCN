@@ -153,7 +153,7 @@ We can run genoCNV using a sample code like the following:
 
 \section{genoCNA}
 
-Usage of function ÒgenoCNAÓ is similar to ÒgenoCNVÓ. There are three extra parameters for genoCNA:
+Usage of function genoCNA is similar to genoCNV. There are three extra parameters for genoCNA:
 \begin{enumerate}
   \item contamination: whether we model tissue contamination, the default value is TRUE.
   \item normalGtp: normalGtp is specified only if paired tumor-normal SNP array is availalble. It is the normal tissue genotype for all the SNPs specified in snpNames, which can only take four different values: -1, 0, 1, and 2. Values 0, 1, 2 correspond to the number of B alleles, and value -1 indicates the normal genotype is missing. By default, it is NULL, means no genotype from normal tissue.
