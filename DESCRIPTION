@@ -1,7 +1,7 @@
 Package: genoCN
 Type: Package
 Title: genotyping and copy number study tools
-Version: 1.22.0
+Version: 1.23.0
 Date: 2010-03-12
 Author: Wei Sun and ZhengZheng Tang
 Maintainer: Wei Sun <wsun@bios.unc.edu>
